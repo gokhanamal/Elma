@@ -9,6 +9,6 @@
 
 import Foundation
 
-protocol ElmaServiceProtocol {
+protocol ElmaNetworkServiceProtocol {
     func getServices(completion: @escaping (Result<ServicesResponse, Error>) -> Void)
 }

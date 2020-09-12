@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class ElmaService: ElmaServiceProtocol {
+final class ElmaNetworkService: ElmaNetworkServiceProtocol {
     enum Endpoints {
        static let baseURL = "https://my-json-server.typicode.com/engincancan/case"
         
@@ -41,6 +41,30 @@ final class ElmaService: ElmaServiceProtocol {
             do {
                 let decoder = JSONDecoder()
                 let responseObject = try decoder.decode(ServicesResponse.self, from: data)
+                DispatchQueue.main.async {
+                    completion(.success(responseObject))
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(.failure(error))
+                }
+            }
+        }
+        task.resume()
+    }
+    
+    func getService(id: Int, completion: @escaping (Result<ServiceDetailsResponse, Error>) -> Void) {
+        let task = URLSession.shared.dataTask(with: Endpoints.getService(id).url){(data, _, error) in
+            guard let data = data else {
+                DispatchQueue.main.async {
+                    completion(.failure(error!))
+                }
+                return
+            }
+            
+            do {
+                let decoder = JSONDecoder()
+                let responseObject = try decoder.decode(ServiceDetailsResponse.self, from: data)
                 DispatchQueue.main.async {
                     completion(.success(responseObject))
                 }
