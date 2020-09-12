@@ -18,6 +18,9 @@ class AppRouter {
     func start() {
         let tabBarController = UITabBarController()
         let homeVC = HomeBuilder.make()
+        
+        tabBarController.tabBar.barTintColor = .white
+        tabBarController.tabBar.isTranslucent = false
         tabBarController.viewControllers = [homeVC]
         
         window?.rootViewController = tabBarController

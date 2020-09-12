@@ -9,30 +9,47 @@
 import Foundation
 
 final class HomeViewModel: HomeViewModelProtocol {
-    var service: ElmaServiceProtocol
+    var networkService: ElmaNetworkService
     weak var view: HomeViewDelegate?
     
-    init(service: ElmaServiceProtocol) {
-        self.service = service
+    init(networkService: ElmaNetworkService) {
+        self.networkService = networkService
     }
     
     func viewDidLoad() {
-        service.getServices{ [weak self] result in
+        view?.handleOutput(.setLoading(true))
+        networkService.getServices{ [weak self] result in
             guard let `self` = self else { return }
             switch(result) {
             case .success(let response):
-                let posts = response.posts.map{_ in PostPresentation()}
-                self.view?.handleOutput(.showPostsList(posts))
+                let posts = response.posts.map{PostPresentation(title: $0.title, category: $0.category, imageURL: $0.imageURL, link: $0.link)}
+                let trending = response.trending.map{ServicePresentation(id: $0.id, name: $0.name, proCount: $0.proCount, imageURL: $0.imageURL)}
+                let others = response.other.map{ServicePresentation(id: $0.id, name: $0.name, proCount: $0.proCount, imageURL: $0.imageURL)}
                 
-                let trending = response.trending.map{_ in ServicePresentation()}
-                self.view?.handleOutput(.showTrendingServicesList(trending))
+                var sections = [Section]()
                 
-                let others = response.posts.map{_ in ServicePresentation()}
-                self.view?.handleOutput(.showOtherServicesList(others))
+                sections.append(Section(title: "Trending services", items: trending, cellType: .trending))
+                sections.append(Section(title: "Other services", items: others, cellType: .other))
+                sections.append(Section(title: "Latest from the blog", items: posts, cellType: .post))
+                
+                self.view?.handleOutput(.showList(sections))
+                self.view?.handleOutput(.setLoading(false))
             case .failure(let error):
                 print(error)
             }
             
+        }
+    }
+    
+    func select(item: SectionItem, cellType: CellType) {
+        if cellType != .post {
+            let service = item as! ServicePresentation
+            let viewModel = ServiceDetailsViewModel(serviceId: service.id, networkService: networkService)
+            view?.navigate(to: .serviceDetails(viewModel))
+        } else {
+            let post = item as! PostPresentation
+            guard let url = URL(string: post.link) else { return }
+            view?.handleOutput(.openURL(with: url))
         }
     }
 }

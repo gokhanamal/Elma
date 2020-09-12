@@ -8,6 +8,9 @@
 
 import Foundation
 
-struct PostPresentation {
-    
+struct PostPresentation: SectionItem {
+    let title: String
+    let category: String
+    let imageURL: String
+    let link: String
 }

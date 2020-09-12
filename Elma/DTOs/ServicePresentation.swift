@@ -8,6 +8,9 @@
 
 import Foundation
 
-struct ServicePresentation {
-    
+struct ServicePresentation: SectionItem {
+    let id: Int
+    let name: String
+    let proCount: Int
+    let imageURL: String
 }

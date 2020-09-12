@@ -3,38 +3,65 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		77065596250A2D1200A53356 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77065595250A2D1200A53356 /* HomeViewModel.swift */; };
 		7706559A250A319B00A53356 /* ServicePresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77065599250A319B00A53356 /* ServicePresentation.swift */; };
-		7706559E250A31F400A53356 /* ElmaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7706559D250A31F400A53356 /* ElmaService.swift */; };
+		7706559E250A31F400A53356 /* ElmaNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7706559D250A31F400A53356 /* ElmaNetworkService.swift */; };
 		770655A0250A320B00A53356 /* ServiceContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7706559F250A320B00A53356 /* ServiceContracts.swift */; };
 		770655A2250A325A00A53356 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770655A1250A325A00A53356 /* Services.swift */; };
 		77232966250A3A0D00182008 /* PostPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77232965250A3A0D00182008 /* PostPresentation.swift */; };
+		77232969250A4CCC00182008 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77232968250A4CCC00182008 /* ServiceCell.swift */; };
+		7723296B250A4CD600182008 /* ServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7723296A250A4CD600182008 /* ServiceCell.xib */; };
 		775E4023250A254E005CD1FD /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775E4022250A254E005CD1FD /* AppRouter.swift */; };
 		775E4025250A26F3005CD1FD /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775E4024250A26F3005CD1FD /* HomeBuilder.swift */; };
 		775E4027250A2710005CD1FD /* HomeContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775E4026250A2710005CD1FD /* HomeContracts.swift */; };
 		775E4029250A29B9005CD1FD /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 775E4028250A29B9005CD1FD /* Home.storyboard */; };
+		7771241A250BDB5A00453729 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77712419250BDB5A00453729 /* PostCell.swift */; };
+		7771241C250BDB9A00453729 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7771241B250BDB9A00453729 /* PostCell.xib */; };
+		77A661BF250A644500AD6EEA /* SectionCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A661BE250A644500AD6EEA /* SectionCellController.swift */; };
+		77A661C2250A86AC00AD6EEA /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A661C1250A86AC00AD6EEA /* UIImage+Ext.swift */; };
+		77A985E1250CC58B0010B3EF /* ServiceDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77A985E0250CC58B0010B3EF /* ServiceDetails.storyboard */; };
+		77A985E3250CC5B10010B3EF /* ServiceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A985E2250CC5B10010B3EF /* ServiceDetailsViewController.swift */; };
+		77A985E5250CC5CE0010B3EF /* ServiceDetailsContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A985E4250CC5CE0010B3EF /* ServiceDetailsContracts.swift */; };
+		77A985E7250CC6B70010B3EF /* ServiceDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A985E6250CC6B70010B3EF /* ServiceDetailsViewModel.swift */; };
+		77A985E9250CC8E60010B3EF /* ServiceDetailsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A985E8250CC8E60010B3EF /* ServiceDetailsBuilder.swift */; };
+		77A985EB250CD0520010B3EF /* ServiceDetailsPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A985EA250CD0520010B3EF /* ServiceDetailsPresentation.swift */; };
+		77A985ED250CD06D0010B3EF /* ServiceDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A985EC250CD06D0010B3EF /* ServiceDetails.swift */; };
 		77B47D01250A233A004A4593 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B47D00250A233A004A4593 /* AppDelegate.swift */; };
 		77B47D03250A233A004A4593 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B47D02250A233A004A4593 /* SceneDelegate.swift */; };
 		77B47D05250A233A004A4593 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B47D04250A233A004A4593 /* HomeViewController.swift */; };
 		77B47D0A250A233B004A4593 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77B47D09250A233B004A4593 /* Assets.xcassets */; };
 		77B47D0D250A233B004A4593 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B47D0B250A233B004A4593 /* LaunchScreen.storyboard */; };
+		795CED9086D30662D30EC875 /* Pods_Elma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DB1620599B63D26ACAABBB /* Pods_Elma.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		77065595250A2D1200A53356 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		77065599250A319B00A53356 /* ServicePresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePresentation.swift; sourceTree = "<group>"; };
-		7706559D250A31F400A53356 /* ElmaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElmaService.swift; sourceTree = "<group>"; };
+		7706559D250A31F400A53356 /* ElmaNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElmaNetworkService.swift; sourceTree = "<group>"; };
 		7706559F250A320B00A53356 /* ServiceContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceContracts.swift; sourceTree = "<group>"; };
 		770655A1250A325A00A53356 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		77232965250A3A0D00182008 /* PostPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPresentation.swift; sourceTree = "<group>"; };
+		77232968250A4CCC00182008 /* ServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
+		7723296A250A4CD600182008 /* ServiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceCell.xib; sourceTree = "<group>"; };
 		775E4022250A254E005CD1FD /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		775E4024250A26F3005CD1FD /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
 		775E4026250A2710005CD1FD /* HomeContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContracts.swift; sourceTree = "<group>"; };
 		775E4028250A29B9005CD1FD /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		77712419250BDB5A00453729 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		7771241B250BDB9A00453729 /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
+		77A661BE250A644500AD6EEA /* SectionCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCellController.swift; sourceTree = "<group>"; };
+		77A661C1250A86AC00AD6EEA /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
+		77A985E0250CC58B0010B3EF /* ServiceDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ServiceDetails.storyboard; sourceTree = "<group>"; };
+		77A985E2250CC5B10010B3EF /* ServiceDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsViewController.swift; sourceTree = "<group>"; };
+		77A985E4250CC5CE0010B3EF /* ServiceDetailsContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsContracts.swift; sourceTree = "<group>"; };
+		77A985E6250CC6B70010B3EF /* ServiceDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsViewModel.swift; sourceTree = "<group>"; };
+		77A985E8250CC8E60010B3EF /* ServiceDetailsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsBuilder.swift; sourceTree = "<group>"; };
+		77A985EA250CD0520010B3EF /* ServiceDetailsPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsPresentation.swift; sourceTree = "<group>"; };
+		77A985EC250CD06D0010B3EF /* ServiceDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetails.swift; sourceTree = "<group>"; };
 		77B47CFD250A233A004A4593 /* Elma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B47D00250A233A004A4593 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77B47D02250A233A004A4593 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +69,9 @@
 		77B47D09250A233B004A4593 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77B47D0C250A233B004A4593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77B47D0E250A233B004A4593 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EABC716160809F882E93BAE /* Pods-Elma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elma.debug.xcconfig"; path = "Target Support Files/Pods-Elma/Pods-Elma.debug.xcconfig"; sourceTree = "<group>"; };
+		A26A307409BE6D68B9B24D8C /* Pods-Elma.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elma.release.xcconfig"; path = "Target Support Files/Pods-Elma/Pods-Elma.release.xcconfig"; sourceTree = "<group>"; };
+		C3DB1620599B63D26ACAABBB /* Pods_Elma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Elma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,17 +79,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				795CED9086D30662D30EC875 /* Pods_Elma.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		77065597250A2D1900A53356 /* Cell */ = {
+		125CF9F1A42D848E200BBAF7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				9EABC716160809F882E93BAE /* Pods-Elma.debug.xcconfig */,
+				A26A307409BE6D68B9B24D8C /* Pods-Elma.release.xcconfig */,
 			);
-			path = Cell;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		77065597250A2D1900A53356 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				77712417250BDB3B00453729 /* PostCell */,
+				77A661BD250A643900AD6EEA /* SectionCell */,
+				77232967250A4CBC00182008 /* ServiceCell */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		77065598250A318D00A53356 /* DTOs */ = {
@@ -67,26 +110,74 @@
 			children = (
 				77065599250A319B00A53356 /* ServicePresentation.swift */,
 				77232965250A3A0D00182008 /* PostPresentation.swift */,
+				77A985EA250CD0520010B3EF /* ServiceDetailsPresentation.swift */,
 			);
 			path = DTOs;
 			sourceTree = "<group>";
 		};
-		7706559B250A31C400A53356 /* Service */ = {
+		7706559B250A31C400A53356 /* ElmaAPI */ = {
 			isa = PBXGroup;
 			children = (
 				7706559C250A31CE00A53356 /* Response */,
-				7706559D250A31F400A53356 /* ElmaService.swift */,
+				7706559D250A31F400A53356 /* ElmaNetworkService.swift */,
 				7706559F250A320B00A53356 /* ServiceContracts.swift */,
 			);
-			path = Service;
+			path = ElmaAPI;
 			sourceTree = "<group>";
 		};
 		7706559C250A31CE00A53356 /* Response */ = {
 			isa = PBXGroup;
 			children = (
 				770655A1250A325A00A53356 /* Services.swift */,
+				77A985EC250CD06D0010B3EF /* ServiceDetails.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		77232967250A4CBC00182008 /* ServiceCell */ = {
+			isa = PBXGroup;
+			children = (
+				77232968250A4CCC00182008 /* ServiceCell.swift */,
+				7723296A250A4CD600182008 /* ServiceCell.xib */,
+			);
+			path = ServiceCell;
+			sourceTree = "<group>";
+		};
+		77712417250BDB3B00453729 /* PostCell */ = {
+			isa = PBXGroup;
+			children = (
+				77712419250BDB5A00453729 /* PostCell.swift */,
+				7771241B250BDB9A00453729 /* PostCell.xib */,
+			);
+			path = PostCell;
+			sourceTree = "<group>";
+		};
+		77A661BD250A643900AD6EEA /* SectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				77A661BE250A644500AD6EEA /* SectionCellController.swift */,
+			);
+			path = SectionCell;
+			sourceTree = "<group>";
+		};
+		77A661C0250A869A00AD6EEA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				77A661C1250A86AC00AD6EEA /* UIImage+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		77A985DF250CC5760010B3EF /* ServiceDetails */ = {
+			isa = PBXGroup;
+			children = (
+				77A985E0250CC58B0010B3EF /* ServiceDetails.storyboard */,
+				77A985E2250CC5B10010B3EF /* ServiceDetailsViewController.swift */,
+				77A985E4250CC5CE0010B3EF /* ServiceDetailsContracts.swift */,
+				77A985E6250CC6B70010B3EF /* ServiceDetailsViewModel.swift */,
+				77A985E8250CC8E60010B3EF /* ServiceDetailsBuilder.swift */,
+			);
+			path = ServiceDetails;
 			sourceTree = "<group>";
 		};
 		77B47CF4250A233A004A4593 = {
@@ -94,6 +185,8 @@
 			children = (
 				77B47CFF250A233A004A4593 /* Elma */,
 				77B47CFE250A233A004A4593 /* Products */,
+				125CF9F1A42D848E200BBAF7 /* Pods */,
+				BFCF654A240BDA514B076631 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,7 +201,8 @@
 		77B47CFF250A233A004A4593 /* Elma */ = {
 			isa = PBXGroup;
 			children = (
-				7706559B250A31C400A53356 /* Service */,
+				77A661C0250A869A00AD6EEA /* Extensions */,
+				7706559B250A31C400A53356 /* ElmaAPI */,
 				77065598250A318D00A53356 /* DTOs */,
 				77B47D15250A24C7004A4593 /* Scenes */,
 				77B47D14250A24BB004A4593 /* App */,
@@ -132,6 +226,7 @@
 		77B47D15250A24C7004A4593 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				77A985DF250CC5760010B3EF /* ServiceDetails */,
 				77B47D16250A24D1004A4593 /* Home */,
 			);
 			path = Scenes;
@@ -140,7 +235,7 @@
 		77B47D16250A24D1004A4593 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				77065597250A2D1900A53356 /* Cell */,
+				77065597250A2D1900A53356 /* Cells */,
 				77B47D04250A233A004A4593 /* HomeViewController.swift */,
 				775E4024250A26F3005CD1FD /* HomeBuilder.swift */,
 				775E4026250A2710005CD1FD /* HomeContracts.swift */,
@@ -150,6 +245,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		BFCF654A240BDA514B076631 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3DB1620599B63D26ACAABBB /* Pods_Elma.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,9 +260,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77B47D11250A233B004A4593 /* Build configuration list for PBXNativeTarget "Elma" */;
 			buildPhases = (
+				01D030DA2C69DE7B0F2ED11E /* [CP] Check Pods Manifest.lock */,
 				77B47CF9250A233A004A4593 /* Sources */,
 				77B47CFA250A233A004A4593 /* Frameworks */,
 				77B47CFB250A233A004A4593 /* Resources */,
+				F4A964F61E2850601EB74FE6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -209,30 +314,85 @@
 			buildActionMask = 2147483647;
 			files = (
 				775E4029250A29B9005CD1FD /* Home.storyboard in Resources */,
+				7723296B250A4CD600182008 /* ServiceCell.xib in Resources */,
+				7771241C250BDB9A00453729 /* PostCell.xib in Resources */,
 				77B47D0D250A233B004A4593 /* LaunchScreen.storyboard in Resources */,
 				77B47D0A250A233B004A4593 /* Assets.xcassets in Resources */,
+				77A985E1250CC58B0010B3EF /* ServiceDetails.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01D030DA2C69DE7B0F2ED11E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Elma-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4A964F61E2850601EB74FE6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Elma/Pods-Elma-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Elma/Pods-Elma-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Elma/Pods-Elma-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		77B47CF9250A233A004A4593 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77A661C2250A86AC00AD6EEA /* UIImage+Ext.swift in Sources */,
 				775E4027250A2710005CD1FD /* HomeContracts.swift in Sources */,
-				7706559E250A31F400A53356 /* ElmaService.swift in Sources */,
+				7706559E250A31F400A53356 /* ElmaNetworkService.swift in Sources */,
 				7706559A250A319B00A53356 /* ServicePresentation.swift in Sources */,
+				77A985E9250CC8E60010B3EF /* ServiceDetailsBuilder.swift in Sources */,
 				770655A2250A325A00A53356 /* Services.swift in Sources */,
 				770655A0250A320B00A53356 /* ServiceContracts.swift in Sources */,
 				775E4023250A254E005CD1FD /* AppRouter.swift in Sources */,
 				77065596250A2D1200A53356 /* HomeViewModel.swift in Sources */,
 				77232966250A3A0D00182008 /* PostPresentation.swift in Sources */,
+				77A985E3250CC5B10010B3EF /* ServiceDetailsViewController.swift in Sources */,
 				77B47D05250A233A004A4593 /* HomeViewController.swift in Sources */,
+				77A661BF250A644500AD6EEA /* SectionCellController.swift in Sources */,
 				775E4025250A26F3005CD1FD /* HomeBuilder.swift in Sources */,
 				77B47D01250A233A004A4593 /* AppDelegate.swift in Sources */,
+				77A985E5250CC5CE0010B3EF /* ServiceDetailsContracts.swift in Sources */,
+				77A985ED250CD06D0010B3EF /* ServiceDetails.swift in Sources */,
 				77B47D03250A233A004A4593 /* SceneDelegate.swift in Sources */,
+				77232969250A4CCC00182008 /* ServiceCell.swift in Sources */,
+				77A985EB250CD0520010B3EF /* ServiceDetailsPresentation.swift in Sources */,
+				77A985E7250CC6B70010B3EF /* ServiceDetailsViewModel.swift in Sources */,
+				7771241A250BDB5A00453729 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +526,7 @@
 		};
 		77B47D12250A233B004A4593 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EABC716160809F882E93BAE /* Pods-Elma.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -384,6 +545,7 @@
 		};
 		77B47D13250A233B004A4593 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A26A307409BE6D68B9B24D8C /* Pods-Elma.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

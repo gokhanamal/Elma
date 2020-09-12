@@ -6,7 +6,7 @@
 //  Copyright © 2020 Gokhan Namal. All rights reserved.
 //
 
-import class UIKit.UINavigationController
+import UIKit
 
 protocol HomeBuilderProtocol {
     static func make() -> UINavigationController
@@ -15,15 +15,35 @@ protocol HomeBuilderProtocol {
 protocol HomeViewModelProtocol {
     var view: HomeViewDelegate? { get set }
     func viewDidLoad()
+    func select(item: SectionItem , cellType: CellType)
 }
 
 protocol HomeViewDelegate: class {    
     func handleOutput(_ output: HomeViewModelOutputs)
+    func navigate(to route: HomeViewRoute)
 }
 
 enum HomeViewModelOutputs {
     case setLoading(Bool)
-    case showTrendingServicesList([ServicePresentation])
-    case showOtherServicesList([ServicePresentation])
-    case showPostsList([PostPresentation])
+    case showList([Section])
+    case openURL(with: URL)
+}
+
+enum HomeViewRoute {
+    case serviceDetails(ServiceDetailsViewModel)
+}
+
+
+struct Section {
+    let title: String
+    let items: [SectionItem]
+    let cellType: CellType
+}
+
+protocol SectionItem { }
+
+enum CellType {
+    case post
+    case trending
+    case other
 }
