@@ -34,6 +34,9 @@ final class HomeViewController: UIViewController {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        
+        tableView.estimatedRowHeight = 120
+        tableView.rowHeight = UITableView.automaticDimension
     }
     
     private func setupNavigationBar() {
