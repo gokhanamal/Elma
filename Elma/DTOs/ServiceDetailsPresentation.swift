@@ -11,6 +11,4 @@ import Foundation
 struct ServiceDetailsPresentation {
     let imageURL: String
     let name: String
-    let rating: Double?
-    let completedJobs: Int
 }

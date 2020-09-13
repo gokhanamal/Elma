@@ -26,6 +26,7 @@ protocol ServiceDetailsViewDelegate: class {
 enum ServiceDetailsOutputs {
     case setLoading(Bool)
     case showDetails(ServiceDetailsPresentation, [InfoCell])
+    case showError(String)
 }
 
 struct InfoCell {

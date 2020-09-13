@@ -35,7 +35,8 @@ final class HomeViewModel: HomeViewModelProtocol {
                 self.view?.handleOutput(.showList(sections))
                 self.view?.handleOutput(.setLoading(false))
             case .failure(let error):
-                print(error)
+                self.view?.handleOutput(.showError(error.localizedDescription))
+                self.view?.handleOutput(.setLoading(false))
             }
             
         }

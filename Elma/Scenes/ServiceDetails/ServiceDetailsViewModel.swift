@@ -31,14 +31,14 @@ final class ServiceDetailsViewModel: ServiceDetailsViewModelProtocol {
             guard let `self` = self else { return }
             switch(result) {
             case .success(let serviceData):
-                let serviceDetails = ServiceDetailsPresentation(imageURL: serviceData.imageURL, name: serviceData.name, rating: serviceData.rating, completedJobs: serviceData.completedJobs)
-                
+                let serviceDetails = ServiceDetailsPresentation(imageURL: serviceData.imageURL, name: serviceData.name)
                 let infoCells = self.prepareInfoCells(serviceData: serviceData)
                 
                 self.view?.handleOutput(.showDetails(serviceDetails, infoCells))
                 self.view?.handleOutput(.setLoading(false))
             case .failure(let error):
-                print(error)
+                self.view?.handleOutput(.showError(error.localizedDescription))
+                self.view?.handleOutput(.setLoading(false))
             }
         }
     }
@@ -57,7 +57,7 @@ final class ServiceDetailsViewModel: ServiceDetailsViewModelProtocol {
             infoCells.append(ratingCell)
         }
         
-        if let completedJob = formater.string(from: NSNumber(value: serviceData.proCount)) {
+        if let completedJob = formater.string(from: NSNumber(value: serviceData.completedJobs)), serviceData.completedJobs > 0 {
             let completedJobText = prepareInfoText(of: "\(completedJob)", in: "Last month \(completedJob) job completed")
             let completedJobCell = InfoCell(icon: UIImage(named: "completed"), text: completedJobText)
             infoCells.append(completedJobCell)

@@ -33,7 +33,7 @@ final class ElmaNetworkService: ElmaNetworkServiceProtocol {
         let task = URLSession.shared.dataTask(with: Endpoints.getServices.url){(data, _, error) in
             guard let data = data else {
                 DispatchQueue.main.async {
-                    completion(.failure(error!))
+                    completion(.failure(error ?? NetworkError.failedToGetData("Get Services")))
                 }
                 return
             }
@@ -57,7 +57,7 @@ final class ElmaNetworkService: ElmaNetworkServiceProtocol {
         let task = URLSession.shared.dataTask(with: Endpoints.getService(id).url){(data, _, error) in
             guard let data = data else {
                 DispatchQueue.main.async {
-                    completion(.failure(error!))
+                    completion(.failure(error ?? NetworkError.failedToGetData("Get Services")))
                 }
                 return
             }
@@ -75,5 +75,18 @@ final class ElmaNetworkService: ElmaNetworkServiceProtocol {
             }
         }
         task.resume()
+    }
+}
+
+public enum NetworkError: Error {
+    case failedToGetData(String)
+}
+
+extension NetworkError: LocalizedError {
+    public var errorDescription: String? {
+        switch self {
+        case .failedToGetData(let methodName):
+            return NSLocalizedString("Could't get \(methodName) data from the server", comment: methodName)
+        }
     }
 }

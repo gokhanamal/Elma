@@ -57,13 +57,7 @@ extension ServiceDetailsViewController: ServiceDetailsViewDelegate {
     func handleOutput(_ output: ServiceDetailsOutputs) {
         switch output {
         case .setLoading(let isLoading):
-            if isLoading {
-                activityIndicator.isHidden = false
-                serviceNameLabel.isHidden = true
-            } else {
-                activityIndicator.isHidden = true
-                serviceNameLabel.isHidden = false
-            }
+            handleSetLoading(isLoading: isLoading)
         case .showDetails(let serviceDetails, let cells):
             serviceNameLabel.text = serviceDetails.name
             
@@ -73,6 +67,20 @@ extension ServiceDetailsViewController: ServiceDetailsViewDelegate {
             
             infoCells = cells
             tableView.reloadData()
+        case .showError(let error):
+            showAlert(title: "Error!", message: error)
+        }
+    }
+    
+    private func handleSetLoading(isLoading: Bool) {
+        if isLoading {
+            activityIndicator.isHidden = false
+            serviceNameLabel.isHidden = true
+            tableView.isHidden = true
+        } else {
+            activityIndicator.isHidden = true
+            serviceNameLabel.isHidden = false
+            tableView.isHidden = false
         }
     }
 }

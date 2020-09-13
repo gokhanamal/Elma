@@ -25,7 +25,7 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSearchBar()
-        setupSearchBar()
+        setupNavigationBar()
         setupTableView()
         
         viewModel.viewDidLoad()
@@ -62,6 +62,8 @@ extension HomeViewController: HomeViewDelegate {
             tableView.reloadData()
         case .openURL(with: let url):
             UIApplication.shared.open(url, options: [:])
+        case .showError(let error):
+            showAlert(title: "Error!", message: error)
         }
     }
     

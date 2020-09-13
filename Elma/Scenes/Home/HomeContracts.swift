@@ -27,6 +27,7 @@ enum HomeViewModelOutputs {
     case setLoading(Bool)
     case showList([Section])
     case openURL(with: URL)
+    case showError(String)
 }
 
 enum HomeViewRoute {
