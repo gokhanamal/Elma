@@ -18,6 +18,7 @@
 		77232966250A3A0D00182008 /* PostPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77232965250A3A0D00182008 /* PostPresentation.swift */; };
 		77232969250A4CCC00182008 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77232968250A4CCC00182008 /* ServiceCell.swift */; };
 		7723296B250A4CD600182008 /* ServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7723296A250A4CD600182008 /* ServiceCell.xib */; };
+		7734D7FA250E8A1A003F5B0D /* ServiceDetailsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7734D7F9250E8A1A003F5B0D /* ServiceDetailsViewModelTest.swift */; };
 		775E4023250A254E005CD1FD /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775E4022250A254E005CD1FD /* AppRouter.swift */; };
 		775E4025250A26F3005CD1FD /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775E4024250A26F3005CD1FD /* HomeBuilder.swift */; };
 		775E4027250A2710005CD1FD /* HomeContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775E4026250A2710005CD1FD /* HomeContracts.swift */; };
@@ -67,6 +68,7 @@
 		77232965250A3A0D00182008 /* PostPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPresentation.swift; sourceTree = "<group>"; };
 		77232968250A4CCC00182008 /* ServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
 		7723296A250A4CD600182008 /* ServiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceCell.xib; sourceTree = "<group>"; };
+		7734D7F9250E8A1A003F5B0D /* ServiceDetailsViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsViewModelTest.swift; sourceTree = "<group>"; };
 		775E4022250A254E005CD1FD /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		775E4024250A26F3005CD1FD /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
 		775E4026250A2710005CD1FD /* HomeContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContracts.swift; sourceTree = "<group>"; };
@@ -130,8 +132,9 @@
 				7702DA0E250E1F900067197B /* Mocks */,
 				7702DA0A250E1F240067197B /* Resources */,
 				7702DA02250E1F0A0067197B /* HomeViewModelTest.swift */,
-				7702DA04250E1F0A0067197B /* Info.plist */,
 				77E2C52D250E23B900F7F1CD /* ElmaNetworkServiceTest.swift */,
+				7734D7F9250E8A1A003F5B0D /* ServiceDetailsViewModelTest.swift */,
+				7702DA04250E1F0A0067197B /* Info.plist */,
 			);
 			path = ElmaTests;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77E2C52E250E23B900F7F1CD /* ElmaNetworkServiceTest.swift in Sources */,
+				7734D7FA250E8A1A003F5B0D /* ServiceDetailsViewModelTest.swift in Sources */,
 				7702DA03250E1F0A0067197B /* HomeViewModelTest.swift in Sources */,
 				7702DA10250E1F9F0067197B /* ElmaNetworkServiceMock.swift in Sources */,
 			);

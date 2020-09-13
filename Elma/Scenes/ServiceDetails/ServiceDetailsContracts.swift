@@ -23,10 +23,22 @@ protocol ServiceDetailsViewDelegate: class {
     func handleOutput(_ output: ServiceDetailsOutputs)
 }
 
-enum ServiceDetailsOutputs {
+enum ServiceDetailsOutputs: Equatable {
     case setLoading(Bool)
     case showDetails(ServiceDetailsPresentation, [InfoCell])
     case showError(String)
+    static func == (lhs: ServiceDetailsOutputs, rhs: ServiceDetailsOutputs) -> Bool {
+        switch (lhs, rhs) {
+        case (.setLoading(let a), .setLoading(let b)):
+            return a == b
+        case (.showDetails(let details, _), .showDetails(let detailsNext, _)):
+            return details.imageURL == detailsNext.imageURL && details.name == detailsNext.name
+        case (.showError(let a), .showError(let b)):
+            return a == b
+        default:
+            return false
+        }
+    }
 }
 
 struct InfoCell {
