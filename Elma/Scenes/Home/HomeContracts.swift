@@ -23,11 +23,25 @@ protocol HomeViewDelegate: class {
     func navigate(to route: HomeViewRoute)
 }
 
-enum HomeViewModelOutputs {
+enum HomeViewModelOutputs: Equatable {
     case setLoading(Bool)
     case showList([Section])
     case openURL(with: URL)
     case showError(String)
+    static func == (lhs: HomeViewModelOutputs, rhs: HomeViewModelOutputs) -> Bool {
+        switch (lhs, rhs) {
+        case (.setLoading(let a), .setLoading(let b)):
+            return a == b
+        case (.showList(let a), .showList(let b)):
+            return a.count == b.count
+        case (.openURL(with: let a), .openURL(with: let b)):
+            return a == b
+        case (.showError(let a), .showError(let b)):
+            return a == b
+        default:
+            return false
+        }
+    }
 }
 
 enum HomeViewRoute {

@@ -12,7 +12,7 @@ import UIKit
 final class ServiceDetailsViewModel: ServiceDetailsViewModelProtocol {
     weak var view: ServiceDetailsViewDelegate?
     private var serviceId: Int
-    private var networkService: ElmaNetworkService
+    private var networkService: ElmaNetworkServiceProtocol
     private var formater: NumberFormatter {
         let numberFormater = NumberFormatter()
         numberFormater.groupingSeparator = "."
@@ -20,7 +20,7 @@ final class ServiceDetailsViewModel: ServiceDetailsViewModelProtocol {
         return numberFormater
     }
     
-    init(serviceId: Int, networkService: ElmaNetworkService) {
+    init(serviceId: Int, networkService: ElmaNetworkServiceProtocol) {
         self.serviceId = serviceId
         self.networkService = networkService
     }

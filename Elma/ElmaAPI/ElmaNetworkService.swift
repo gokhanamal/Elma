@@ -1,5 +1,5 @@
 //
-//  ElmaService.swift
+//  ElmaNetworkService.swift
 //  Elma
 //
 //  Created by Gokhan Namal on 10.09.2020.

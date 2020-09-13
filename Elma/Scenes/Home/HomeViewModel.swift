@@ -9,10 +9,10 @@
 import Foundation
 
 final class HomeViewModel: HomeViewModelProtocol {
-    var networkService: ElmaNetworkService
+    var networkService: ElmaNetworkServiceProtocol
     weak var view: HomeViewDelegate?
     
-    init(networkService: ElmaNetworkService) {
+    init(networkService: ElmaNetworkServiceProtocol) {
         self.networkService = networkService
     }
     
