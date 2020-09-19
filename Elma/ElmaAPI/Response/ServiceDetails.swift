@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ServiceDetailsResponse: Codable {
+struct ServiceDetailsResponse: Decodable {
     let id: Int
     let serviceId: Int
     let name: String

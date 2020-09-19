@@ -8,13 +8,13 @@
 
 import Foundation
 
-struct ServicesResponse: Codable {
+struct ServicesResponse: Decodable {
     var trending: [Service]
     var other: [Service]
     var posts: [Post]
 }
 
-struct Service: Codable {
+struct Service: Decodable {
     let id: Int
     let serviceId: Int
     let name: String
@@ -32,7 +32,7 @@ struct Service: Codable {
     }
 }
 
-struct Post: Codable {
+struct Post: Decodable {
     var title: String
     var category: String
     var imageURL: String
