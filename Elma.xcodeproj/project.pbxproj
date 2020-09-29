@@ -220,6 +220,7 @@
 		77A661C0250A869A00AD6EEA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				77065598250A318D00A53356 /* DTOs */,
 				77A661C1250A86AC00AD6EEA /* UIImage+Ext.swift */,
 				77A985EE250D7D3D0010B3EF /* UIViewController+Ext.swift */,
 			);
@@ -261,7 +262,6 @@
 		77B47CFF250A233A004A4593 /* Elma */ = {
 			isa = PBXGroup;
 			children = (
-				77065598250A318D00A53356 /* DTOs */,
 				77A661C0250A869A00AD6EEA /* Extensions */,
 				7706559B250A31C400A53356 /* ElmaAPI */,
 				77B47D15250A24C7004A4593 /* Scenes */,
