@@ -8,7 +8,6 @@
 
 import Foundation
 import class UIKit.UINavigationController
-import class UIKit.UIImage
 
 protocol ServiceDetailsBuilderProtocol {
     static func make(viewModel: ServiceDetailsViewModel) -> UINavigationController
@@ -42,6 +41,11 @@ enum ServiceDetailsOutputs: Equatable {
 }
 
 struct InfoCell {
-    let icon: UIImage?
+    let icon: String
     let text: NSMutableAttributedString?
+}
+
+struct ServiceDetailsPresentation {
+    let imageURL: String
+    let name: String
 }

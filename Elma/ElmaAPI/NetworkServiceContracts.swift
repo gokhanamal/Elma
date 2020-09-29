@@ -11,5 +11,5 @@ import Foundation
 
 protocol ElmaNetworkServiceProtocol {
     func getServices(completion: @escaping (Result<ServicesResponse, Error>) -> Void)
-     func getService(id: Int, completion: @escaping (Result<ServiceDetailsResponse, Error>) -> Void)
+    func getService(id: Int, completion: @escaping (Result<ServiceDetailsResponse, Error>) -> Void)
 }

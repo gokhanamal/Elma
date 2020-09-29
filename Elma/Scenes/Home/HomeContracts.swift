@@ -23,6 +23,8 @@ protocol HomeViewDelegate: class {
     func navigate(to route: HomeViewRoute)
 }
 
+protocol SectionItem { }
+
 enum HomeViewModelOutputs: Equatable {
     case setLoading(Bool)
     case showList([Section])
@@ -48,6 +50,11 @@ enum HomeViewRoute {
     case serviceDetails(ServiceDetailsViewModel)
 }
 
+enum CellType {
+    case post
+    case trending
+    case other
+}
 
 struct Section {
     let title: String
@@ -55,10 +62,16 @@ struct Section {
     let cellType: CellType
 }
 
-protocol SectionItem { }
+struct ServicePresentation: SectionItem {
+    let id: Int
+    let name: String
+    let proCount: Int
+    let imageURL: String
+}
 
-enum CellType {
-    case post
-    case trending
-    case other
+struct PostPresentation: SectionItem {
+    let title: String
+    let category: String
+    let imageURL: String
+    let link: String
 }

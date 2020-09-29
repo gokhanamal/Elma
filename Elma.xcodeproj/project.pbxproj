@@ -11,11 +11,9 @@
 		7702DA0D250E1F560067197B /* service.json in Resources */ = {isa = PBXBuildFile; fileRef = 7702DA0C250E1F560067197B /* service.json */; };
 		7702DA10250E1F9F0067197B /* ElmaNetworkServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7702DA0F250E1F9F0067197B /* ElmaNetworkServiceMock.swift */; };
 		77065596250A2D1200A53356 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77065595250A2D1200A53356 /* HomeViewModel.swift */; };
-		7706559A250A319B00A53356 /* ServicePresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77065599250A319B00A53356 /* ServicePresentation.swift */; };
 		7706559E250A31F400A53356 /* ElmaNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7706559D250A31F400A53356 /* ElmaNetworkService.swift */; };
 		770655A0250A320B00A53356 /* NetworkServiceContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7706559F250A320B00A53356 /* NetworkServiceContracts.swift */; };
-		770655A2250A325A00A53356 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770655A1250A325A00A53356 /* Services.swift */; };
-		77232966250A3A0D00182008 /* PostPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77232965250A3A0D00182008 /* PostPresentation.swift */; };
+		770655A2250A325A00A53356 /* ServicesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770655A1250A325A00A53356 /* ServicesResponse.swift */; };
 		77232969250A4CCC00182008 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77232968250A4CCC00182008 /* ServiceCell.swift */; };
 		7723296B250A4CD600182008 /* ServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7723296A250A4CD600182008 /* ServiceCell.xib */; };
 		7734D7FA250E8A1A003F5B0D /* ServiceDetailsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7734D7F9250E8A1A003F5B0D /* ServiceDetailsViewModelTest.swift */; };
@@ -32,8 +30,7 @@
 		77A985E5250CC5CE0010B3EF /* ServiceDetailsContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A985E4250CC5CE0010B3EF /* ServiceDetailsContracts.swift */; };
 		77A985E7250CC6B70010B3EF /* ServiceDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A985E6250CC6B70010B3EF /* ServiceDetailsViewModel.swift */; };
 		77A985E9250CC8E60010B3EF /* ServiceDetailsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A985E8250CC8E60010B3EF /* ServiceDetailsBuilder.swift */; };
-		77A985EB250CD0520010B3EF /* ServiceDetailsPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A985EA250CD0520010B3EF /* ServiceDetailsPresentation.swift */; };
-		77A985ED250CD06D0010B3EF /* ServiceDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A985EC250CD06D0010B3EF /* ServiceDetails.swift */; };
+		77A985ED250CD06D0010B3EF /* ServiceDetailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A985EC250CD06D0010B3EF /* ServiceDetailsResponse.swift */; };
 		77A985EF250D7D3D0010B3EF /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A985EE250D7D3D0010B3EF /* UIViewController+Ext.swift */; };
 		77B47D01250A233A004A4593 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B47D00250A233A004A4593 /* AppDelegate.swift */; };
 		77B47D03250A233A004A4593 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B47D02250A233A004A4593 /* SceneDelegate.swift */; };
@@ -41,6 +38,8 @@
 		77B47D0A250A233B004A4593 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77B47D09250A233B004A4593 /* Assets.xcassets */; };
 		77B47D0D250A233B004A4593 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B47D0B250A233B004A4593 /* LaunchScreen.storyboard */; };
 		77E2C52E250E23B900F7F1CD /* ElmaNetworkServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2C52D250E23B900F7F1CD /* ElmaNetworkServiceTest.swift */; };
+		77EE7DB12523D120009B4547 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EE7DB02523D120009B4547 /* Service.swift */; };
+		77EE7DB52523D13D009B4547 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EE7DB42523D13D009B4547 /* Post.swift */; };
 		795CED9086D30662D30EC875 /* Pods_Elma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DB1620599B63D26ACAABBB /* Pods_Elma.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,11 +60,9 @@
 		7702DA0C250E1F560067197B /* service.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = service.json; sourceTree = "<group>"; };
 		7702DA0F250E1F9F0067197B /* ElmaNetworkServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElmaNetworkServiceMock.swift; sourceTree = "<group>"; };
 		77065595250A2D1200A53356 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		77065599250A319B00A53356 /* ServicePresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicePresentation.swift; sourceTree = "<group>"; };
 		7706559D250A31F400A53356 /* ElmaNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElmaNetworkService.swift; sourceTree = "<group>"; };
 		7706559F250A320B00A53356 /* NetworkServiceContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceContracts.swift; sourceTree = "<group>"; };
-		770655A1250A325A00A53356 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
-		77232965250A3A0D00182008 /* PostPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPresentation.swift; sourceTree = "<group>"; };
+		770655A1250A325A00A53356 /* ServicesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesResponse.swift; sourceTree = "<group>"; };
 		77232968250A4CCC00182008 /* ServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
 		7723296A250A4CD600182008 /* ServiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceCell.xib; sourceTree = "<group>"; };
 		7734D7F9250E8A1A003F5B0D /* ServiceDetailsViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsViewModelTest.swift; sourceTree = "<group>"; };
@@ -82,8 +79,7 @@
 		77A985E4250CC5CE0010B3EF /* ServiceDetailsContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsContracts.swift; sourceTree = "<group>"; };
 		77A985E6250CC6B70010B3EF /* ServiceDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsViewModel.swift; sourceTree = "<group>"; };
 		77A985E8250CC8E60010B3EF /* ServiceDetailsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsBuilder.swift; sourceTree = "<group>"; };
-		77A985EA250CD0520010B3EF /* ServiceDetailsPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsPresentation.swift; sourceTree = "<group>"; };
-		77A985EC250CD06D0010B3EF /* ServiceDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetails.swift; sourceTree = "<group>"; };
+		77A985EC250CD06D0010B3EF /* ServiceDetailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsResponse.swift; sourceTree = "<group>"; };
 		77A985EE250D7D3D0010B3EF /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		77B47CFD250A233A004A4593 /* Elma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B47D00250A233A004A4593 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +89,8 @@
 		77B47D0C250A233B004A4593 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77B47D0E250A233B004A4593 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77E2C52D250E23B900F7F1CD /* ElmaNetworkServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElmaNetworkServiceTest.swift; sourceTree = "<group>"; };
+		77EE7DB02523D120009B4547 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		77EE7DB42523D13D009B4547 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		9EABC716160809F882E93BAE /* Pods-Elma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elma.debug.xcconfig"; path = "Target Support Files/Pods-Elma/Pods-Elma.debug.xcconfig"; sourceTree = "<group>"; };
 		A26A307409BE6D68B9B24D8C /* Pods-Elma.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Elma.release.xcconfig"; path = "Target Support Files/Pods-Elma/Pods-Elma.release.xcconfig"; sourceTree = "<group>"; };
 		C3DB1620599B63D26ACAABBB /* Pods_Elma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Elma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,9 +166,8 @@
 		77065598250A318D00A53356 /* DTOs */ = {
 			isa = PBXGroup;
 			children = (
-				77065599250A319B00A53356 /* ServicePresentation.swift */,
-				77232965250A3A0D00182008 /* PostPresentation.swift */,
-				77A985EA250CD0520010B3EF /* ServiceDetailsPresentation.swift */,
+				77EE7DB02523D120009B4547 /* Service.swift */,
+				77EE7DB42523D13D009B4547 /* Post.swift */,
 			);
 			path = DTOs;
 			sourceTree = "<group>";
@@ -188,8 +185,8 @@
 		7706559C250A31CE00A53356 /* Response */ = {
 			isa = PBXGroup;
 			children = (
-				770655A1250A325A00A53356 /* Services.swift */,
-				77A985EC250CD06D0010B3EF /* ServiceDetails.swift */,
+				770655A1250A325A00A53356 /* ServicesResponse.swift */,
+				77A985EC250CD06D0010B3EF /* ServiceDetailsResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -264,9 +261,9 @@
 		77B47CFF250A233A004A4593 /* Elma */ = {
 			isa = PBXGroup;
 			children = (
+				77065598250A318D00A53356 /* DTOs */,
 				77A661C0250A869A00AD6EEA /* Extensions */,
 				7706559B250A31C400A53356 /* ElmaAPI */,
-				77065598250A318D00A53356 /* DTOs */,
 				77B47D15250A24C7004A4593 /* Scenes */,
 				77B47D14250A24BB004A4593 /* App */,
 				77B47D09250A233B004A4593 /* Assets.xcassets */,
@@ -477,26 +474,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				77A661C2250A86AC00AD6EEA /* UIImage+Ext.swift in Sources */,
+				77EE7DB52523D13D009B4547 /* Post.swift in Sources */,
 				775E4027250A2710005CD1FD /* HomeContracts.swift in Sources */,
 				7706559E250A31F400A53356 /* ElmaNetworkService.swift in Sources */,
-				7706559A250A319B00A53356 /* ServicePresentation.swift in Sources */,
 				77A985E9250CC8E60010B3EF /* ServiceDetailsBuilder.swift in Sources */,
 				77A985EF250D7D3D0010B3EF /* UIViewController+Ext.swift in Sources */,
-				770655A2250A325A00A53356 /* Services.swift in Sources */,
+				770655A2250A325A00A53356 /* ServicesResponse.swift in Sources */,
 				770655A0250A320B00A53356 /* NetworkServiceContracts.swift in Sources */,
 				775E4023250A254E005CD1FD /* AppRouter.swift in Sources */,
+				77EE7DB12523D120009B4547 /* Service.swift in Sources */,
 				77065596250A2D1200A53356 /* HomeViewModel.swift in Sources */,
-				77232966250A3A0D00182008 /* PostPresentation.swift in Sources */,
 				77A985E3250CC5B10010B3EF /* ServiceDetailsViewController.swift in Sources */,
 				77B47D05250A233A004A4593 /* HomeViewController.swift in Sources */,
 				77A661BF250A644500AD6EEA /* SectionCellController.swift in Sources */,
 				775E4025250A26F3005CD1FD /* HomeBuilder.swift in Sources */,
 				77B47D01250A233A004A4593 /* AppDelegate.swift in Sources */,
 				77A985E5250CC5CE0010B3EF /* ServiceDetailsContracts.swift in Sources */,
-				77A985ED250CD06D0010B3EF /* ServiceDetails.swift in Sources */,
+				77A985ED250CD06D0010B3EF /* ServiceDetailsResponse.swift in Sources */,
 				77B47D03250A233A004A4593 /* SceneDelegate.swift in Sources */,
 				77232969250A4CCC00182008 /* ServiceCell.swift in Sources */,
-				77A985EB250CD0520010B3EF /* ServiceDetailsPresentation.swift in Sources */,
 				77A985E7250CC6B70010B3EF /* ServiceDetailsViewModel.swift in Sources */,
 				7771241A250BDB5A00453729 /* PostCell.swift in Sources */,
 			);

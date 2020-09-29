@@ -7,7 +7,8 @@
 //
 
 import Foundation
-import UIKit
+import class UIKit.UIColor
+import class UIKit.UIFont
 
 final class ServiceDetailsViewModel: ServiceDetailsViewModelProtocol {
     weak var view: ServiceDetailsViewDelegate?
@@ -48,25 +49,25 @@ final class ServiceDetailsViewModel: ServiceDetailsViewModelProtocol {
         
         let proCount = serviceData.proCount
         let proText = prepareInfoText(of: "\(proCount)", in: "\(proCount) \(proCount > 1 ? "pros" : "pro") near you")
-        let proCell = InfoCell(icon: UIImage(named: "pro"), text: proText)
+        let proCell = InfoCell(icon: "pro", text: proText)
         infoCells.append(proCell)
         
         if let rating = serviceData.rating {
             let ratingText = prepareInfoText(of: "\(rating)", in: "\(rating) average rating")
-            let ratingCell = InfoCell(icon: UIImage(named: "star"), text: ratingText)
+            let ratingCell = InfoCell(icon: "star", text: ratingText)
             infoCells.append(ratingCell)
         }
         
         if let completedJob = formater.string(from: NSNumber(value: serviceData.completedJobs)), serviceData.completedJobs > 0 {
             let completedJobText = prepareInfoText(of: "\(completedJob)", in: "Last month \(completedJob) job completed")
-            let completedJobCell = InfoCell(icon: UIImage(named: "completed"), text: completedJobText)
+            let completedJobCell = InfoCell(icon: "completed", text: completedJobText)
             infoCells.append(completedJobCell)
         }
         
-        let cancelCell = InfoCell(icon: UIImage(named: "cancel"), text:  NSMutableAttributedString(string: "Free of charge"))
+        let cancelCell = InfoCell(icon: "cancel", text:  NSMutableAttributedString(string: "Free of charge"))
         infoCells.append(cancelCell)
         
-        let secureCell = InfoCell(icon: UIImage(named: "secure"), text:  NSMutableAttributedString(string: "Service Guaranteed"))
+        let secureCell = InfoCell(icon: "secure", text:  NSMutableAttributedString(string: "Service Guaranteed"))
         infoCells.append(secureCell)
         
         return infoCells

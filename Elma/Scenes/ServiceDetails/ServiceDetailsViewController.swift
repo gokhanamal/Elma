@@ -93,7 +93,7 @@ extension ServiceDetailsViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "InfoCell") else { return UITableViewCell() }
         let info = infoCells[indexPath.row]
-        cell.imageView?.image = info.icon
+        cell.imageView?.image = UIImage(named: info.icon)
         cell.textLabel?.attributedText = info.text
         return cell
     }

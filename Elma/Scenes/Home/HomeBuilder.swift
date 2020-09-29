@@ -22,7 +22,6 @@ final class HomeBuilder: HomeBuilderProtocol {
         let networkService = ElmaNetworkService()
         viewController.viewModel = HomeViewModel(networkService: networkService)
         
-        
         let navigationController = UINavigationController(rootViewController: viewController)
         return navigationController
     }
