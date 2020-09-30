@@ -36,7 +36,7 @@ class ElmaNetworkServiceTest: XCTestCase {
             switch(result) {
                 case .success(let gameResponse):
                     XCTAssertEqual(gameResponse.id, 100)
-                XCTAssertEqual(gameResponse.serviceId, 100)
+                    XCTAssertEqual(gameResponse.serviceId, 100)
             case .failure(_):
                 XCTFail("Failed to testing getGame")
             }

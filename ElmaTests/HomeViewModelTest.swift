@@ -28,7 +28,7 @@ class HomeViewModelTest: XCTestCase {
         
         XCTAssertEqual(view.outputs[0], .setLoading(true))
         
-        // I just check the sections count that why this case dont't fail
+        // I just check the sections count that's why this case doesn't fail
         XCTAssertEqual(view.outputs[1], .showList(Section.fake()))
         
         XCTAssertEqual(view.outputs[2], .setLoading(false))
