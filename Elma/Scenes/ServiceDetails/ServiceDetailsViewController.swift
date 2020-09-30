@@ -34,7 +34,7 @@ final class ServiceDetailsViewController: UIViewController {
     @objc func dismissModal() {
         dismiss(animated: true)
     }
-    
+
     private func setupGradient() {
         let gradient: CAGradientLayer = CAGradientLayer()
         gradient.colors = [UIColor.black.withAlphaComponent(0.1).cgColor, UIColor.black.withAlphaComponent(0.8).cgColor]
